@@ -1,0 +1,289 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Default FoodLens Theme - Fresh Green/Orange Food Theme */
+    --background: 150 20% 6%;
+    --foreground: 80 60% 95%;
+
+    --card: 150 20% 10%;
+    --card-foreground: 80 60% 95%;
+
+    --popover: 150 20% 8%;
+    --popover-foreground: 80 60% 95%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 150 20% 6%;
+
+    --secondary: 150 30% 18%;
+    --secondary-foreground: 80 60% 95%;
+
+    --muted: 150 15% 15%;
+    --muted-foreground: 80 20% 55%;
+
+    --accent: 30 90% 55%;
+    --accent-foreground: 150 20% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 80 60% 95%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 150 20% 6%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 150 20% 6%;
+
+    --border: 150 20% 18%;
+    --input: 150 20% 12%;
+    --ring: 142 70% 45%;
+
+    --radius: 1rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(142 70% 45%) 0%, hsl(30 90% 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(30 90% 55%) 0%, hsl(142 70% 45%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(150 20% 6%) 0%, hsl(150 20% 4%) 100%);
+
+    --shadow-glow: 0 0 40px hsl(142 70% 45% / 0.3);
+    --shadow-glow-accent: 0 0 40px hsl(30 90% 55% / 0.3);
+    
+    --glass-bg: hsl(150 20% 10% / 0.6);
+    --glass-border: hsl(142 30% 30% / 0.2);
+  }
+
+  /* Midnight Theme */
+  [data-theme="midnight"] {
+    --background: 230 25% 8%;
+    --foreground: 210 40% 95%;
+    --card: 230 25% 12%;
+    --card-foreground: 210 40% 95%;
+    --popover: 230 25% 10%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 210 100% 55%;
+    --primary-foreground: 230 25% 8%;
+    --secondary: 230 30% 20%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 230 20% 18%;
+    --muted-foreground: 210 20% 60%;
+    --accent: 200 100% 60%;
+    --accent-foreground: 230 25% 8%;
+    --border: 230 20% 20%;
+    --input: 230 25% 15%;
+    --ring: 210 100% 55%;
+  }
+
+  /* Sunrise Theme (Light) */
+  [data-theme="sunrise"] {
+    --background: 40 40% 97%;
+    --foreground: 20 15% 15%;
+    --card: 40 40% 100%;
+    --card-foreground: 20 15% 15%;
+    --popover: 40 40% 100%;
+    --popover-foreground: 20 15% 15%;
+    --primary: 25 95% 55%;
+    --primary-foreground: 40 40% 98%;
+    --secondary: 40 30% 90%;
+    --secondary-foreground: 20 15% 20%;
+    --muted: 40 20% 92%;
+    --muted-foreground: 20 10% 45%;
+    --accent: 350 85% 60%;
+    --accent-foreground: 40 40% 98%;
+    --border: 40 20% 88%;
+    --input: 40 30% 95%;
+    --ring: 25 95% 55%;
+  }
+
+  /* Neon Purple Theme */
+  [data-theme="neon-purple"] {
+    --background: 270 30% 6%;
+    --foreground: 280 100% 95%;
+    --card: 270 30% 10%;
+    --card-foreground: 280 100% 95%;
+    --popover: 270 30% 8%;
+    --popover-foreground: 280 100% 95%;
+    --primary: 280 100% 60%;
+    --primary-foreground: 270 30% 6%;
+    --secondary: 270 40% 20%;
+    --secondary-foreground: 280 100% 95%;
+    --muted: 270 20% 15%;
+    --muted-foreground: 280 30% 60%;
+    --accent: 320 100% 65%;
+    --accent-foreground: 270 30% 6%;
+    --border: 270 30% 20%;
+    --input: 270 30% 12%;
+    --ring: 280 100% 60%;
+  }
+
+  /* Ocean Theme */
+  [data-theme="ocean"] {
+    --background: 200 50% 8%;
+    --foreground: 180 60% 95%;
+    --card: 200 50% 12%;
+    --card-foreground: 180 60% 95%;
+    --popover: 200 50% 10%;
+    --popover-foreground: 180 60% 95%;
+    --primary: 175 80% 45%;
+    --primary-foreground: 200 50% 8%;
+    --secondary: 200 40% 20%;
+    --secondary-foreground: 180 60% 95%;
+    --muted: 200 30% 18%;
+    --muted-foreground: 180 30% 55%;
+    --accent: 160 70% 50%;
+    --accent-foreground: 200 50% 8%;
+    --border: 200 30% 20%;
+    --input: 200 50% 14%;
+    --ring: 175 80% 45%;
+  }
+
+  /* Ember Theme */
+  [data-theme="ember"] {
+    --background: 0 20% 6%;
+    --foreground: 30 100% 95%;
+    --card: 0 20% 10%;
+    --card-foreground: 30 100% 95%;
+    --popover: 0 20% 8%;
+    --popover-foreground: 30 100% 95%;
+    --primary: 15 100% 55%;
+    --primary-foreground: 0 20% 6%;
+    --secondary: 0 30% 18%;
+    --secondary-foreground: 30 100% 95%;
+    --muted: 0 15% 15%;
+    --muted-foreground: 30 30% 55%;
+    --accent: 35 100% 55%;
+    --accent-foreground: 0 20% 6%;
+    --border: 0 20% 18%;
+    --input: 0 20% 12%;
+    --ring: 15 100% 55%;
+  }
+
+  /* Arctic Theme (Light) */
+  [data-theme="arctic"] {
+    --background: 200 30% 98%;
+    --foreground: 210 20% 15%;
+    --card: 200 30% 100%;
+    --card-foreground: 210 20% 15%;
+    --popover: 200 30% 100%;
+    --popover-foreground: 210 20% 15%;
+    --primary: 200 90% 50%;
+    --primary-foreground: 200 30% 98%;
+    --secondary: 200 20% 92%;
+    --secondary-foreground: 210 20% 20%;
+    --muted: 200 15% 94%;
+    --muted-foreground: 210 15% 45%;
+    --accent: 180 70% 45%;
+    --accent-foreground: 200 30% 98%;
+    --border: 200 15% 88%;
+    --input: 200 20% 96%;
+    --ring: 200 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Optimize animations */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Grain overlay using CSS - theme aware */
+  .grain-overlay::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Performance optimizations */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .contain-paint {
+    contain: paint;
+  }
+  
+  .contain-layout {
+    contain: layout;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Float animation for backgrounds */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
