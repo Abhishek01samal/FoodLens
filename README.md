@@ -17,7 +17,7 @@ The project focuses on **clarity, usability, and scalability**, combining a mode
 - Commercial product comparisons
 - Modern animated UI with clean UX
 
----
+--
 
 # Tech Stack
 
