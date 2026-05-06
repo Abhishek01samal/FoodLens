@@ -35,6 +35,7 @@ The project focuses on **clarity, usability, and scalability**, combining a mode
 - Supabase (Auth, Functions)
 - Modular component architecture
 
+
 ---
 
 ##  Project Structure (Important Files Only)
